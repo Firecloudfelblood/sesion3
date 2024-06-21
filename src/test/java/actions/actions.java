@@ -25,21 +25,21 @@ public class actions {
         PageFactory.initElements(driver,this);
     }
 
-    public void iramercadolibre() {
-        driver.get("https://www.mercadolibre.com.mx/");
+    public void iramercadolibre(WebDriver driver) {
+        this.driver.get("https://www.mercadolibre.com.mx/");
     }
 
-    public void search() {
+    public void search(WebDriver driver) {
         searchTab.sendKeys("vinyl");
         searchTab.submit();
     }
 
-    public void select() {
+    public void select(WebDriver driver) {
         product.click();
 
     }
 
-    public void validate() {
+    public void validate(WebDriver driver) {
         Assert.assertTrue(Integer.parseInt(price.getText())>0);
     }
 }
